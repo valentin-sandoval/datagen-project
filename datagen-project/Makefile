@@ -10,7 +10,7 @@ all: $(BIN)
 $(BIN): $(SRC)
 	@mkdir -p bin
 	$(CC) $(CFLAGS) -o $(BIN) $(SRC) $(LDFLAGS)
-	@echo "✅ Compilación completa -> $(BIN)"
+	@echo "Compilación completa -> $(BIN)"
 
 run: all
 	@$(BIN) -n 4 -m 100 -o tests/salida_100.csv
@@ -20,6 +20,6 @@ verify: tests/salida_100.csv
 
 clean:
 	rm -rf bin tests/*.csv *.csv
-	@echo "🧹 Proyecto limpio"
+	@echo "Proyecto limpio"
 
 .PHONY: all run verify clean
